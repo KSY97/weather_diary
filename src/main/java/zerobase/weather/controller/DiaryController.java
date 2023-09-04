@@ -54,7 +54,7 @@ public class DiaryController {
         diaryService.updateDiary(date, text);
     }
 
-    @ApiOperation("선택한 날짜의 첫번째 일기를 삭제 합니다.")
+    @ApiOperation("선택한 날짜의 모든 일기를 삭제 합니다.")
     @DeleteMapping("/delete/diary")
     void deleteDiary(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
